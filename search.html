@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdZilla | Search</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- all css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- header section -->
+    <header id="header-section">
+      <nav class="bg-white py-3 shadow fixed-top">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <a
+                href="index.html"
+                class="d-none d-sm-block d-md-none d-lg-block"
+              >
+                <img src="images/logo-color.png" width="150px" alt="" />
+              </a>
+              <a href="index.html" class="d-sm-none d-md-block d-lg-none">
+                <img src="images/logo-icon.png" width="45px" alt="" />
+              </a>
+            </div>
+            <div class="col-auto pe-0 d-none d-md-block ps-5">
+              <a href="ads.html" class="btn btn-outline-primary">Browse Ads</a>
+            </div>
+            <div class="col d-none d-md-block pe-5">
+              <form action="">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control border-primary"
+                    placeholder="What are you looking for?"
+                  />
+                  <button
+                    type="submit"
+                    class="input-group-text btn btn-primary"
+                  >
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col col-md-auto text-end">
+              <a href="login.html" class="btn btn-success me-2"
+                ><i class="bi bi-person me-1"></i>Login</a
+              >
+              <a
+                href="post-ad.html"
+                class="btn btn-primary fw-bold text-uppercase"
+                >Post an ad</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="mobile-search py-3 d-md-none">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-auto pe-0">
+              <a href="ads.html" class="btn btn-outline-primary">Browse Ads</a>
+            </div>
+            <div class="col">
+              <form action="">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control border-primary"
+                    placeholder="What are you looking for?"
+                  />
+                  <button
+                    type="submit"
+                    class="input-group-text btn btn-primary"
+                  >
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- page banner section -->
+    <section id="page-banner-section">
+      <div class="container-fluid">
+        <div class="banner-wrapper">
+          <div class="banner-search">
+            <h2 class="text-white fw-bold">
+              Find Mobile Phones, Electronics, Cars and More in Bangladesh
+            </h2>
+            <p class="text-white">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+              beatae!
+            </p>
+            <form action="" class="p-4 bg-white shadow">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-3 mb-3 mb-md-0">
+                  <select
+                    class="form-select border-primary text-primary"
+                    name=""
+                    id=""
+                    autocomplete="off"
+                  >
+                    <option selected disabled>Division</option>
+                    <option value="">Dhaka Division</option>
+                    <option value="">Khulna Division</option>
+                    <option value="">Barisal Division</option>
+                    <option value="">Rajshahi Division</option>
+                  </select>
+                </div>
+
+                <div class="col-12 col-md-3 mb-3 mb-md-0">
+                  <select
+                    class="form-select border-primary text-primary"
+                    name=""
+                    id=""
+                    autocomplete="off"
+                  >
+                    <option selected disabled>City</option>
+                    <option value="">Dhaka</option>
+                    <option value="">Khulna</option>
+                    <option value="">Barisal</option>
+                    <option value="">Rajshahi</option>
+                  </select>
+                </div>
+
+                <div class="col-12 col-md-3 mb-3 mb-md-0">
+                  <select
+                    class="form-select border-primary text-primary"
+                    name=""
+                    id=""
+                    autocomplete="off"
+                  >
+                    <option selected disabled>Category</option>
+                    <option value="">Mobile Phones</option>
+                    <option value="">Electronics</option>
+                    <option value="">Home and Living</option>
+                    <option value="">Sports and Outdoors</option>
+                  </select>
+                </div>
+
+                <div class="col-12 col-md-3">
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- page banner section end -->
+
+    <!-- featured ads section -->
+    <section id="featured-ads-section" class="pt-5 pb-4">
+      <div class="container-fluid">
+        <h4 class="fw-bold mb-4">
+          Featured <span class="text-primary">Ads</span>
+        </h4>
+        <div id="featuredAds" class="owl-carousel owl-theme">
+          <!-- single ad -->
+          <div class="single-ad">
+            <a href="ad-details.html">
+              <div class="card h-100">
+                <img class="ad-thumbnail" src="uploads/ads/1.jpg" alt="" />
+
+                <div class="ad-info">
+                  <span class="badge text-bg-danger mb-2"
+                    >Dhaka, Dhaka Division</span
+                  >
+                  <h1 class="ad-title">iPhone 3Gs, 512MB Ram, 4GB Rom</h1>
+                  <div class="ad-price text-success">$500</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- single ad end -->
+
+          <!-- single ad -->
+          <div class="single-ad">
+            <a href="ad-details.html">
+              <div class="card h-100">
+                <img class="ad-thumbnail" src="uploads/ads/2.jpg" alt="" />
+
+                <div class="ad-info">
+                  <span class="badge text-bg-danger mb-2"
+                    >Dhaka, Dhaka Division</span
+                  >
+                  <h1 class="ad-title">
+                    Packard Bell Laptop, 128MB Ram, 4GB HDD
+                  </h1>
+                  <div class="ad-price text-success">$500</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- single ad end -->
+
+          <!-- single ad -->
+          <div class="single-ad">
+            <a href="ad-details.html">
+              <div class="card h-100">
+                <img class="ad-thumbnail" src="uploads/ads/3.jpg" alt="" />
+
+                <div class="ad-info">
+                  <span class="badge text-bg-danger mb-2"
+                    >Dhaka, Dhaka Division</span
+                  >
+                  <h1 class="ad-title">Yamaha 80cc 1980 Bike</h1>
+                  <div class="ad-price text-success">$500</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- single ad end -->
+
+          <!-- single ad -->
+          <div class="single-ad">
+            <a href="ad-details.html">
+              <div class="card h-100">
+                <img class="ad-thumbnail" src="uploads/ads/4.jpg" alt="" />
+
+                <div class="ad-info">
+                  <span class="badge text-bg-danger mb-2"
+                    >Dhaka, Dhaka Division</span
+                  >
+                  <h1 class="ad-title">100 Square ft. House</h1>
+                  <div class="ad-price text-success">$500</div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- single ad end -->
+        </div>
+      </div>
+    </section>
+    <!-- featured ads section end -->
+
+    <!-- ads page -->
+    <main id="ads-page" class="py-5">
+      <div class="container-fluid">
+        <nav class="bg-primary-subtle border px-3 py-2 mb-4">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Search Results</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+          <!-- ad filters -->
+          <div class="col-12 col-md-4 mb-4 mb-md-0">
+            <div class="ad-filters">
+              <div class="card">
+                <div class="card-body">
+                  <form action="" class="mb-5">
+                    <h4 class="fw-bold mb-3 fs-5">Search</h4>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search"
+                      />
+                      <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-search"></i>
+                      </button>
+                    </div>
+                  </form>
+
+                  <form action="">
+                    <h4 class="fw-bold mb-3 fs-5">Filter</h4>
+                    <select
+                      class="form-select mb-4"
+                      name=""
+                      id=""
+                      autocomplete="off"
+                    >
+                      <option selected disabled>Division</option>
+                      <option value="">Dhaka Division</option>
+                      <option value="">Khulna Division</option>
+                      <option value="">Barisal Division</option>
+                      <option value="">Rajshahi Division</option>
+                    </select>
+                    <select
+                      class="form-select mb-4"
+                      name=""
+                      id=""
+                      autocomplete="off"
+                    >
+                      <option selected disabled>City</option>
+                      <option value="">Dhaka</option>
+                      <option value="">Khulna</option>
+                      <option value="">Barisal</option>
+                      <option value="">Rajshahi</option>
+                    </select>
+                    <select
+                      class="form-select mb-4"
+                      name=""
+                      id=""
+                      autocomplete="off"
+                    >
+                      <option selected disabled>Category</option>
+                      <option value="">Mobile Phones</option>
+                      <option value="">Electronics</option>
+                      <option value="">Home and Living</option>
+                      <option value="">Sports and Outdoors</option>
+                    </select>
+
+                    <select
+                      class="form-select mb-4"
+                      name=""
+                      id=""
+                      autocomplete="off"
+                    >
+                      <option selected disabled>Sort By</option>
+                      <option value="">Price: High to Low</option>
+                      <option value="">Price: Low to High</option>
+                    </select>
+
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary">
+                        Filter
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ad filters -->
+
+          <!-- ads -->
+          <div class="col-12 col-md-8">
+            <div class="ads">
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h4 class="fw-bold mb-1 fs-5">
+                      <span class="text-primary">Searched For: </span>iphone
+                    </h4>
+                    <span>(140 Ads)</span>
+                  </div>
+                  <div class="row">
+                    <!-- single ad -->
+                    <div class="col-12 col-md-12 col-lg-6 mb-4">
+                      <div class="single-ad">
+                        <div class="d-flex align-items-center">
+                          <a href="ad-details.html">
+                            <img
+                              class="ad-thumbnail"
+                              src="uploads/ads/1.jpg"
+                              alt=""
+                            />
+                          </a>
+                          <div class="ad-info">
+                            <a class="fw-bold" href="ad-details.html"
+                              >iPhone 3Gs, 512MB Ram, 4GB Rom</a
+                            >
+                            <span class="d-block mb-1">2 hours ago</span>
+                            <div class="fw-bold text-success fs-4">$500</div>
+                          </div>
+                        </div>
+                        <div class="ad-footer bg-primary-subtle">
+                          <span
+                            ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                            >Dhaka, Dhaka Division</span
+                          >
+                          <a href="category.html"
+                            ><i class="bi bi-folder-fill me-1"></i>Mobile
+                            Phones</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single ad end -->
+
+                    <!-- single ad -->
+                    <div class="col-12 col-md-12 col-lg-6 mb-4">
+                      <div class="single-ad">
+                        <div class="d-flex align-items-center">
+                          <a href="ad-details.html">
+                            <img
+                              class="ad-thumbnail"
+                              src="uploads/ads/2.jpg"
+                              alt=""
+                            />
+                          </a>
+                          <div class="ad-info">
+                            <a class="fw-bold" href="ad-details.html"
+                              >Packard Bell Laptop, 128MB Ram, 4GB HDD</a
+                            >
+                            <span class="d-block mb-1">2 hours ago</span>
+                            <div class="fw-bold text-success fs-4">$500</div>
+                          </div>
+                        </div>
+                        <div class="ad-footer bg-primary-subtle">
+                          <span
+                            ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                            >Dhaka, Dhaka Division</span
+                          >
+                          <a href="category.html"
+                            ><i class="bi bi-folder-fill me-1"></i>Mobile
+                            Phones</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single ad end -->
+
+                    <!-- single ad -->
+                    <div class="col-12 col-md-12 col-lg-6 mb-4">
+                      <div class="single-ad">
+                        <div class="d-flex align-items-center">
+                          <a href="ad-details.html">
+                            <img
+                              class="ad-thumbnail"
+                              src="uploads/ads/3.jpg"
+                              alt=""
+                            />
+                          </a>
+                          <div class="ad-info">
+                            <a class="fw-bold" href="ad-details.html"
+                              >Yamaha 80cc 1980 Bike</a
+                            >
+                            <span class="d-block mb-1">2 hours ago</span>
+                            <div class="fw-bold text-success fs-4">$500</div>
+                          </div>
+                        </div>
+                        <div class="ad-footer bg-primary-subtle">
+                          <span
+                            ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                            >Dhaka, Dhaka Division</span
+                          >
+                          <a href="category.html"
+                            ><i class="bi bi-folder-fill me-1"></i>Mobile
+                            Phones</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single ad end -->
+
+                    <!-- single ad -->
+                    <div class="col-12 col-md-12 col-lg-6 mb-4">
+                      <div class="single-ad">
+                        <div class="d-flex align-items-center">
+                          <a href="ad-details.html">
+                            <img
+                              class="ad-thumbnail"
+                              src="uploads/ads/4.jpg"
+                              alt=""
+                            />
+                          </a>
+                          <div class="ad-info">
+                            <a class="fw-bold" href="ad-details.html"
+                              >100 Square ft. House</a
+                            >
+                            <span class="d-block mb-1">2 hours ago</span>
+                            <div class="fw-bold text-success fs-4">$500</div>
+                          </div>
+                        </div>
+                        <div class="ad-footer bg-primary-subtle">
+                          <span
+                            ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                            >Dhaka, Dhaka Division</span
+                          >
+                          <a href="category.html"
+                            ><i class="bi bi-folder-fill me-1"></i>Mobile
+                            Phones</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single ad end -->
+
+                    <!-- single ad -->
+                    <div class="col-12 col-md-12 col-lg-6 mb-4">
+                      <div class="single-ad">
+                        <div class="d-flex align-items-center">
+                          <a href="ad-details.html">
+                            <img
+                              class="ad-thumbnail"
+                              src="uploads/ads/1.jpg"
+                              alt=""
+                            />
+                          </a>
+                          <div class="ad-info">
+                            <a class="fw-bold" href="ad-details.html"
+                              >iPhone 3Gs, 512MB Ram, 4GB Rom</a
+                            >
+                            <span class="d-block mb-1">2 hours ago</span>
+                            <div class="fw-bold text-success fs-4">$500</div>
+                          </div>
+                        </div>
+                        <div class="ad-footer bg-primary-subtle">
+                          <span
+                            ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                            >Dhaka, Dhaka Division</span
+                          >
+                          <a href="category.html"
+                            ><i class="bi bi-folder-fill me-1"></i>Mobile
+                            Phones</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single ad end -->
+
+                    <!-- single ad -->
+                    <div class="col-12 col-md-12 col-lg-6 mb-4">
+                      <div class="single-ad">
+                        <div class="d-flex align-items-center">
+                          <a href="ad-details.html">
+                            <img
+                              class="ad-thumbnail"
+                              src="uploads/ads/2.jpg"
+                              alt=""
+                            />
+                          </a>
+                          <div class="ad-info">
+                            <a class="fw-bold" href="ad-details.html"
+                              >Packard Bell Laptop, 128MB Ram, 4GB HDD</a
+                            >
+                            <span class="d-block mb-1">2 hours ago</span>
+                            <div class="fw-bold text-success fs-4">$500</div>
+                          </div>
+                        </div>
+                        <div class="ad-footer bg-primary-subtle">
+                          <span
+                            ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                            >Dhaka, Dhaka Division</span
+                          >
+                          <a href="category.html"
+                            ><i class="bi bi-folder-fill me-1"></i>Mobile
+                            Phones</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <!-- single ad end -->
+                  </div>
+                  <!-- pagination -->
+                  <nav class="my-3">
+                    <ul class="pagination justify-content-center mb-0">
+                      <li class="page-item shadow disabled">
+                        <a class="page-link border"
+                          ><i class="bi bi-chevron-left"></i
+                        ></a>
+                      </li>
+                      <li class="page-item shadow">
+                        <a class="page-link border active" href="#">1</a>
+                      </li>
+                      <li class="page-item shadow">
+                        <a class="page-link border" href="#">2</a>
+                      </li>
+                      <li class="page-item shadow">
+                        <a class="page-link border" href="#">3</a>
+                      </li>
+                      <li class="page-item shadow">
+                        <a class="page-link border" href="#"
+                          ><i class="bi bi-chevron-right"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <!-- pagination end -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ads end -->
+        </div>
+      </div>
+    </main>
+    <!-- ads page end -->
+
+    <!-- footer section -->
+    <footer id="footer-section">
+      <!-- footer top -->
+      <div class="footer-top bg-dark py-5 border-top border-primary border-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h5 class="text-white fw-bold mb-3">Download our app</h5>
+
+              <a href="#">
+                <img
+                  class="mb-2 d-block"
+                  src="images/get-on-google-play.png"
+                  width="200px"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="images/available-on-the-app-store.png"
+                  width="200px"
+                  alt=""
+                />
+              </a>
+              <div class="socials mt-4">
+                <h5 class="text-white fw-bold mb-3">Connect with us</h5>
+                <div class="d-flex align-items-center">
+                  <a href="#" target="_blank">
+                    <img src="images/socials/facebook.svg" alt="" />
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="images/socials/twitter.svg" alt="" />
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="images/socials/instagram.svg" alt="" />
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="images/socials/youtube.svg" alt="" />
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="images/socials/linkedin.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <h5 class="text-white fw-bold mb-3">Categories</h5>
+              <ul class="ps-0">
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Mobile Phones</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Electronics</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Vehicles</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Home and Living</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Education</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html"
+                    >Sports and Outdoors</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <h5 class="text-white fw-bold mb-3">Pages</h5>
+              <ul class="ps-0">
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="index.html">Home</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="ads.html">All Ads</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="about.html">About Us</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="contact.html">Contact Us</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="ad-details.html">Ad Details</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Category</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="search.html">Search</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="login.html">Login</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="signup.html">Signup</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="dashboard.html">Dashboard</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <h5 class="text-white fw-bold mb-3">Our Location</h5>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3746527.4526794753!2d90.3443647!3d23.506657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbn!2sbd!4v1700420060104!5m2!1sbn!2sbd"
+                width="100%"
+                height="200"
+                class="border border-primary border-3"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer top end -->
+
+      <!-- footer bottom -->
+      <div
+        class="footer-bottom border-top border-primary border-2 py-3 bg-dark"
+      >
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <a href="index.html">
+                <img src="images/logo-white.png" width="150px" alt="" />
+              </a>
+            </div>
+            <div class="col text-end">
+              <span class="text-white"
+                >&copy; 2023
+                <a class="fw-bold link-light" href="index.html">AdZilla,</a> All
+                Rights Reserved.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer bottom end -->
+    </footer>
+    <!-- footer section end -->
+
+    <!-- all js -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

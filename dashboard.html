@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdZilla | Dashboard</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- all css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- header section -->
+    <header id="header-section">
+      <nav class="bg-white py-3 shadow fixed-top">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <a
+                href="index.html"
+                class="d-none d-sm-block d-md-none d-lg-block"
+              >
+                <img src="images/logo-color.png" width="150px" alt="" />
+              </a>
+              <a href="index.html" class="d-sm-none d-md-block d-lg-none">
+                <img src="images/logo-icon.png" width="45px" alt="" />
+              </a>
+            </div>
+            <div class="col-auto pe-0 d-none d-md-block ps-5">
+              <a href="ads.html" class="btn btn-outline-primary">Browse Ads</a>
+            </div>
+            <div class="col d-none d-md-block pe-5">
+              <form action="">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control border-primary"
+                    placeholder="What are you looking for?"
+                  />
+                  <button
+                    type="submit"
+                    class="input-group-text btn btn-primary"
+                  >
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col col-md-auto text-end">
+              <a
+                href="post-ad.html"
+                class="btn btn-primary fw-bold text-uppercase me-2"
+                >Post an ad</a
+              >
+              <button type="submit" class="btn btn-danger">Logout</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="mobile-search py-3 d-md-none">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-auto pe-0">
+              <a href="ads.html" class="btn btn-outline-primary">Browse Ads</a>
+            </div>
+            <div class="col">
+              <form action="">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control border-primary"
+                    placeholder="What are you looking for?"
+                  />
+                  <button
+                    type="submit"
+                    class="input-group-text btn btn-primary"
+                  >
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- dashboard page -->
+    <main id="dashboard-page" class="py-5">
+      <div class="container-fluid px-4">
+        <div class="alert alert-primary mb-4" role="alert">
+          <div class="d-flex align-items-center justify-content-between">
+            <h5 class="fw-bold mb-0">
+              Welcome, <span class="text-primary">John Doe</span>
+            </h5>
+            <div class="fst-italic text-end">
+              <span class="text-primary fw-bold">Last Login: </span>21/09/2023
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 mb-4 mb-md-0">
+            <div
+              class="nav flex-column nav-pills bg-white p-4 shadow border"
+              role="tablist"
+            >
+              <button
+                id="overviewBtn"
+                class="nav-link mb-2 active"
+                data-bs-toggle="pill"
+                data-bs-target="#overview"
+                type="button"
+                role="tab"
+              >
+                <i class="bi bi-eye-fill me-1"></i>Overview
+              </button>
+              <button
+                class="nav-link mb-2"
+                data-bs-toggle="pill"
+                data-bs-target="#pendingAds"
+                type="button"
+                role="tab"
+              >
+                <i class="bi bi-badge-ad-fill me-1"></i>Pending Ads
+              </button>
+              <button
+                id="runningAdsBtn"
+                class="nav-link mb-2"
+                data-bs-toggle="pill"
+                data-bs-target="#runningAds"
+                type="button"
+                role="tab"
+              >
+                <i class="bi bi-megaphone-fill me-1"></i>Running Ads
+              </button>
+              <button
+                id="savedAdsBtn"
+                class="nav-link mb-2"
+                data-bs-toggle="pill"
+                data-bs-target="#savedAds"
+                type="button"
+                role="tab"
+              >
+                <i class="bi bi-bookmark-fill me-1"></i>Saved Ads
+              </button>
+              <button
+                class="nav-link mb-2"
+                data-bs-toggle="pill"
+                data-bs-target="#editProfile"
+                type="button"
+                role="tab"
+              >
+                <i class="bi bi-person-fill me-1"></i>Edit Profile
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-8">
+            <div class="tab-content bg-white p-4 shadow border">
+              <!-- overview tab -->
+              <div
+                class="tab-pane fade show active"
+                id="overview"
+                role="tabpanel"
+                tabindex="0"
+              >
+                <div class="text-center">
+                  <img
+                    class="profile-photo"
+                    src="images/default-profile-photo.jpg"
+                    alt=""
+                  />
+                  <h5 class="fw-bold">John Doe</h5>
+                  <a class="d-block mb-1" href="tel:01234-567890"
+                    ><i class="bi bi-telephone-fill me-1"></i>01234-567890</a
+                  >
+                  <a href="mailto:johndoe@example.com"
+                    ><i class="bi bi-envelope-fill me-1"></i
+                    >johndoe@example.com</a
+                  >
+                  <div
+                    class="d-flex align-items-center justify-content-center mt-3"
+                  >
+                    <button id="runningAdsBtn2" class="btn btn-info me-2">
+                      <i class="bi bi-megaphone-fill me-1"></i>Running Ads (2)
+                    </button>
+                    <button id="savedAdsBtn2" class="btn btn-success">
+                      <i class="bi bi-bookmark-fill me-1"></i>Saved Ads (2)
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- overview tab end -->
+
+              <!-- pending ads tab -->
+              <div
+                class="tab-pane fade show"
+                id="pendingAds"
+                role="tabpanel"
+                tabindex="0"
+              >
+                <h5 class="fw-bold text-primary mb-3">Pending Ads</h5>
+                <div class="row">
+                  <!-- single ad -->
+                  <div class="col-12 col-md-12 col-lg-6 mb-4">
+                    <div class="single-ad">
+                      <div class="d-flex align-items-center">
+                        <img
+                          class="ad-thumbnail"
+                          src="uploads/ads/1.jpg"
+                          alt=""
+                        />
+                        <div class="ad-info">
+                          <span class="fw-bold"
+                            >iPhone 3Gs, 512MB Ram, 4GB Rom</span
+                          >
+                          <span class="d-block mb-1">2 hours ago</span>
+                          <div class="fw-bold text-success fs-4">$500</div>
+                        </div>
+                      </div>
+                      <div class="ad-footer bg-primary-subtle">
+                        <span
+                          ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                          >Dhaka, Dhaka Division</span
+                        >
+                        <a href="category.html"
+                          ><i class="bi bi-folder-fill me-1"></i>Mobile
+                          Phones</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single ad end -->
+
+                  <!-- single ad -->
+                  <div class="col-12 col-md-12 col-lg-6 mb-4">
+                    <div class="single-ad">
+                      <div class="d-flex align-items-center">
+                        <img
+                          class="ad-thumbnail"
+                          src="uploads/ads/2.jpg"
+                          alt=""
+                        />
+                        <div class="ad-info">
+                          <span class="fw-bold"
+                            >Old Laptop, 512MB Ram, 40GB HDD</span
+                          >
+                          <span class="d-block mb-1">2 hours ago</span>
+                          <div class="fw-bold text-success fs-4">$500</div>
+                        </div>
+                      </div>
+                      <div class="ad-footer bg-primary-subtle">
+                        <span
+                          ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                          >Dhaka, Dhaka Division</span
+                        >
+                        <a href="category.html"
+                          ><i class="bi bi-folder-fill me-1"></i>Mobile
+                          Phones</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single ad end -->
+                </div>
+
+                <!-- pagination -->
+                <nav>
+                  <ul class="pagination justify-content-end mb-0">
+                    <li class="page-item shadow disabled">
+                      <a class="page-link border"
+                        ><i class="bi bi-chevron-left"></i
+                      ></a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border active" href="#">1</a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border" href="#">2</a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border" href="#">3</a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border" href="#"
+                        ><i class="bi bi-chevron-right"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- pagination end -->
+              </div>
+              <!-- pending ads tab end -->
+
+              <!-- running ads tab -->
+              <div
+                class="tab-pane fade show"
+                id="runningAds"
+                role="tabpanel"
+                tabindex="0"
+              >
+                <h5 class="fw-bold text-primary mb-3">Running Ads</h5>
+                <div class="row">
+                  <!-- single ad -->
+                  <div class="col-12 col-md-12 col-lg-6 mb-4">
+                    <div class="single-ad">
+                      <div class="d-flex align-items-center">
+                        <a href="ad-details.html">
+                          <img
+                            class="ad-thumbnail"
+                            src="uploads/ads/1.jpg"
+                            alt=""
+                          />
+                        </a>
+                        <div class="ad-info">
+                          <a class="fw-bold" href="ad-details.html"
+                            >iPhone 3Gs, 512MB Ram, 4GB Rom</a
+                          >
+                          <span class="d-block mb-1">2 hours ago</span>
+                          <div class="fw-bold text-success fs-4">$500</div>
+                        </div>
+                      </div>
+                      <div class="ad-footer bg-primary-subtle">
+                        <span
+                          ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                          >Dhaka, Dhaka Division</span
+                        >
+                        <a href="category.html"
+                          ><i class="bi bi-folder-fill me-1"></i>Mobile
+                          Phones</a
+                        >
+                      </div>
+                      <div class="d-grid mt-2">
+                        <button class="btn btn-danger" type="submit">
+                          <i class="bi bi-trash me-1"></i>Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single ad end -->
+
+                  <!-- single ad -->
+                  <div class="col-12 col-md-12 col-lg-6 mb-4">
+                    <div class="single-ad">
+                      <div class="d-flex align-items-center">
+                        <a href="ad-details.html">
+                          <img
+                            class="ad-thumbnail"
+                            src="uploads/ads/2.jpg"
+                            alt=""
+                          />
+                        </a>
+                        <div class="ad-info">
+                          <a class="fw-bold" href="ad-details.html"
+                            >Old Laptop, 512MB Ram, 40GB HDD</a
+                          >
+                          <span class="d-block mb-1">2 hours ago</span>
+                          <div class="fw-bold text-success fs-4">$500</div>
+                        </div>
+                      </div>
+                      <div class="ad-footer bg-primary-subtle">
+                        <span
+                          ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                          >Dhaka, Dhaka Division</span
+                        >
+                        <a href="category.html"
+                          ><i class="bi bi-folder-fill me-1"></i>Mobile
+                          Phones</a
+                        >
+                      </div>
+                      <div class="d-grid mt-2">
+                        <button class="btn btn-danger" type="submit">
+                          <i class="bi bi-trash me-1"></i>Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single ad end -->
+                </div>
+
+                <!-- pagination -->
+                <nav>
+                  <ul class="pagination justify-content-end mb-0">
+                    <li class="page-item shadow disabled">
+                      <a class="page-link border"
+                        ><i class="bi bi-chevron-left"></i
+                      ></a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border active" href="#">1</a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border" href="#">2</a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border" href="#">3</a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border" href="#"
+                        ><i class="bi bi-chevron-right"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- pagination end -->
+              </div>
+              <!-- running ads tab end -->
+
+              <!-- saved ads tab -->
+              <div
+                class="tab-pane fade show"
+                id="savedAds"
+                role="tabpanel"
+                tabindex="0"
+              >
+                <h5 class="fw-bold text-primary mb-3">Saved Ads</h5>
+                <div class="row">
+                  <!-- single ad -->
+                  <div class="col-12 col-md-12 col-lg-6 mb-4">
+                    <div class="single-ad">
+                      <div class="d-flex align-items-center">
+                        <a href="ad-details.html">
+                          <img
+                            class="ad-thumbnail"
+                            src="uploads/ads/1.jpg"
+                            alt=""
+                          />
+                        </a>
+                        <div class="ad-info">
+                          <a class="fw-bold" href="ad-details.html"
+                            >iPhone 3Gs, 512MB Ram, 4GB Rom</a
+                          >
+                          <span class="d-block mb-1">2 hours ago</span>
+                          <div class="fw-bold text-success fs-4">$500</div>
+                        </div>
+                      </div>
+                      <div class="ad-footer bg-primary-subtle">
+                        <span
+                          ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                          >Dhaka, Dhaka Division</span
+                        >
+                        <a href="category.html"
+                          ><i class="bi bi-folder-fill me-1"></i>Mobile
+                          Phones</a
+                        >
+                      </div>
+                      <div class="d-grid mt-2">
+                        <button class="btn btn-danger" type="submit">
+                          <i class="bi bi-trash me-1"></i>Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single ad end -->
+
+                  <!-- single ad -->
+                  <div class="col-12 col-md-12 col-lg-6 mb-4">
+                    <div class="single-ad">
+                      <div class="d-flex align-items-center">
+                        <a href="ad-details.html">
+                          <img
+                            class="ad-thumbnail"
+                            src="uploads/ads/2.jpg"
+                            alt=""
+                          />
+                        </a>
+                        <div class="ad-info">
+                          <a class="fw-bold" href="ad-details.html"
+                            >Old Laptop, 512MB Ram, 40GB HDD</a
+                          >
+                          <span class="d-block mb-1">2 hours ago</span>
+                          <div class="fw-bold text-success fs-4">$500</div>
+                        </div>
+                      </div>
+                      <div class="ad-footer bg-primary-subtle">
+                        <span
+                          ><i class="bi bi-geo-alt-fill me-1 text-primary"></i
+                          >Dhaka, Dhaka Division</span
+                        >
+                        <a href="category.html"
+                          ><i class="bi bi-folder-fill me-1"></i>Mobile
+                          Phones</a
+                        >
+                      </div>
+                      <div class="d-grid mt-2">
+                        <button class="btn btn-danger" type="submit">
+                          <i class="bi bi-trash me-1"></i>Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single ad end -->
+                </div>
+
+                <!-- pagination -->
+                <nav>
+                  <ul class="pagination justify-content-end mb-0">
+                    <li class="page-item shadow disabled">
+                      <a class="page-link border"
+                        ><i class="bi bi-chevron-left"></i
+                      ></a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border active" href="#">1</a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border" href="#">2</a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border" href="#">3</a>
+                    </li>
+                    <li class="page-item shadow">
+                      <a class="page-link border" href="#"
+                        ><i class="bi bi-chevron-right"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- pagination end -->
+              </div>
+              <!-- saved ads tab end -->
+
+              <!-- edit profile tab -->
+              <div
+                class="tab-pane fade show"
+                id="editProfile"
+                role="tabpanel"
+                tabindex="0"
+              >
+                <form action="" class="mb-5">
+                  <h5 class="fw-bold text-primary mb-3">Edit Profile</h5>
+                  <div class="row">
+                    <div class="col-12 col-md-6 mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="First Name"
+                        required
+                      />
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Last Name"
+                        required
+                      />
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email Address"
+                        required
+                      />
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Phone Number"
+                        required
+                      />
+                    </div>
+                    <div class="col-12 mb-3">
+                      <div class="input-group">
+                        <span class="input-group-text btn btn-info"
+                          >Profile Photo</span
+                        >
+                        <input type="file" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <button type="submit" class="btn btn-success">
+                        Save Changes
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <form action="">
+                  <h5 class="fw-bold text-primary mb-3">Change Password</h5>
+                  <div class="row">
+                    <div class="col-12 mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Current Password"
+                        required
+                      />
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="New Password"
+                        required
+                      />
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Re-type New Password"
+                        required
+                      />
+                    </div>
+                    <div class="text-end">
+                      <button type="submit" class="btn btn-success">
+                        Change
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- edit profile tab end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- dashboard page end -->
+
+    <!-- footer section -->
+    <footer id="footer-section">
+      <!-- footer top -->
+      <div class="footer-top bg-dark py-5 border-top border-primary border-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h5 class="text-white fw-bold mb-3">Download our app</h5>
+
+              <a href="#">
+                <img
+                  class="mb-2 d-block"
+                  src="images/get-on-google-play.png"
+                  width="200px"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="images/available-on-the-app-store.png"
+                  width="200px"
+                  alt=""
+                />
+              </a>
+              <div class="socials mt-4">
+                <h5 class="text-white fw-bold mb-3">Connect with us</h5>
+                <div class="d-flex align-items-center">
+                  <a href="#" target="_blank">
+                    <img src="images/socials/facebook.svg" alt="" />
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="images/socials/twitter.svg" alt="" />
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="images/socials/instagram.svg" alt="" />
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="images/socials/youtube.svg" alt="" />
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="images/socials/linkedin.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <h5 class="text-white fw-bold mb-3">Categories</h5>
+              <ul class="ps-0">
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Mobile Phones</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Electronics</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Vehicles</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Home and Living</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Education</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html"
+                    >Sports and Outdoors</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <h5 class="text-white fw-bold mb-3">Pages</h5>
+              <ul class="ps-0">
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="index.html">Home</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="ads.html">All Ads</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="about.html">About Us</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="contact.html">Contact Us</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="ad-details.html">Ad Details</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="category.html">Category</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="search.html">Search</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="login.html">Login</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="signup.html">Signup</a>
+                </li>
+                <li class="list-unstyled mb-2">
+                  <a class="link-light" href="dashboard.html">Dashboard</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <h5 class="text-white fw-bold mb-3">Our Location</h5>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3746527.4526794753!2d90.3443647!3d23.506657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbn!2sbd!4v1700420060104!5m2!1sbn!2sbd"
+                width="100%"
+                height="200"
+                class="border border-primary border-3"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer top end -->
+
+      <!-- footer bottom -->
+      <div
+        class="footer-bottom border-top border-primary border-2 py-3 bg-dark"
+      >
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <a href="index.html">
+                <img src="images/logo-white.png" width="150px" alt="" />
+              </a>
+            </div>
+            <div class="col text-end">
+              <span class="text-white"
+                >&copy; 2023
+                <a class="fw-bold link-light" href="index.html">AdZilla,</a> All
+                Rights Reserved.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer bottom end -->
+    </footer>
+    <!-- footer section end -->
+
+    <!-- all js -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
